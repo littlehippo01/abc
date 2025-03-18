@@ -7,58 +7,69 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Text Row'),
-        backgroundColor: Colors.blue,
-        foregroundColor: Colors.white,
+        title: Text(
+          'Text with column Row2',
+          style: TextStyle(fontWeight: FontWeight.bold),
+        ),
+        backgroundColor: Colors.amber,
         centerTitle: true,
       ),
-      body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text(
-                'J',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Row(
+              children: [
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(140,0,0,0),
+                  child: Column(
+                    children: [
+                      Icon(Icons.email_rounded),
+                      Text('James'),
+                      Icon(Icons.email_rounded),
+                      Icon(Icons.account_circle),
+                      Icon(Icons.account_balance),
+                    ],
+                  ),
                 ),
-              ),
-              Text('ames'),
-              Text(
-                'C',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20
+                Column(
+                  children: [
+                    Icon(Icons.account_circle), 
+                    Text('Cathy'),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0,4,0,0),
+                      child: Text('James'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0,4,0,0),
+                      child: Text('Cathy'),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.fromLTRB(0,4,0,0),
+                      child: Text('Kenny'),
+                    )],
                 ),
-              ),
-              Text('athy'),
-              Text(
-                'K',
-                style: TextStyle(
-                  fontWeight: FontWeight.bold,
-                  fontSize: 20
-                ),
-              ),
-              Text('enny'),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Text('제임스'),
-              SizedBox(
-                width: 20,
-              ),
-              Text('캐시'),
-                            SizedBox(
-                width: 20,
-              ),
-              Text('케니'),
-            ],
-          ),
-        ],
+                Column(children: [
+                  Icon(Icons.account_balance), 
+                  Text('Kenny'),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0,4,0,0),
+                    child: Text(""),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0,4,0,0),
+                    child: Text(""),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(0,4,0,0),
+                    child: Text(""),
+                  )
+                  ]
+                  ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
